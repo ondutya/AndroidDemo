@@ -11,7 +11,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.first_layout.*
 
-class FirstActivity : AppCompatActivity() {
+class FirstActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,7 @@ class FirstActivity : AppCompatActivity() {
             var intent = Intent(Intent.ACTION_VIEW)
             intent.setData(Uri.parse("http://www.baidu.com"))
             startActivity(intent)
+            //SecondActivity.actionStart(this, "data1", "data2") //传递数据
         }
     }
 
@@ -47,4 +48,5 @@ class FirstActivity : AppCompatActivity() {
         }
         return true
     }
+
 }
